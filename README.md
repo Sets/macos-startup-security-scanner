@@ -31,6 +31,39 @@ The script reads the `.plist` files located in the specified system folders. Fro
     ```
 
 ## Understanding the Output
+**Example Output**
+```
+./security.sh
+🔐 Starting macOS Security Check...
+----------------------------------------
+✅ Scan started. Using macOS Gatekeeper for verification.
+
+📂 Scanning Directory: /Users/sets/Library/LaunchAgents
+----------------------------------------
+✅ Gatekeeper Approved: Developer ID Application: Google LLC (EQHXZ8M8AV) → /Users/sets/Library/Application Support/Google/GoogleUpdater/Current/GoogleUpdater.app/Contents/MacOS/GoogleUpdater
+✅ Gatekeeper Approved: Developer ID Application: JetBrains s.r.o. (2ZEFAR8TH3) → /Applications/JetBrains Toolbox.app/Contents/MacOS/jetbrains-toolbox
+✅ Signed Helper Tool: Developer ID Application: Valve Corporation (MXGJJ98X76) → /Users/sets/Library/Application Support/Steam/SteamApps/steamclean
+
+📂 Scanning Directory: /Library/LaunchAgents
+----------------------------------------
+✅ Gatekeeper Approved: Developer ID Application: Logitech Inc. (QED4VVPZWA) → /Library/Application Support/Logitech.localized/LogiOptionsPlus/logioptionsplus_agent.app/Contents/MacOS/logioptionsplus_agent
+
+📂 Scanning Directory: /Library/LaunchDaemons
+----------------------------------------
+🤔 INFO: Path is a non-executable type (e.g., socket). This is expected. → /Library/PrivilegedHelperTools/com.docker.socket
+✅ Signed Helper Tool: Developer ID Application: Docker Inc (9BNSXJN65R) → /Library/PrivilegedHelperTools/com.docker.vmnetd
+✅ Gatekeeper Approved: Developer ID Application: Logitech Inc. (QED4VVPZWA) → /Library/Application Support/Logitech.localized/LogiOptionsPlus/logioptionsplus_agent.app/Contents/Frameworks/logioptionsplus_updater.app/Contents/MacOS/logioptionsplus_updater
+✅ Gatekeeper Approved: Developer ID Application: Logitech Inc. (QED4VVPZWA) → /Library/Application Support/Logitech.localized/LogiRightSightForWebcams/LogiRightSight.app/Contents/MacOS/LogiRightSight
+✅ Signed Helper Tool: Developer ID Application: Beyond Code GmbH (8Z259RPWAC) → /Library/PrivilegedHelperTools/de.beyondco.herd.helper
+
+📌 Checking User Login Items
+----------------------------------------
+✅ Gatekeeper Approved: Developer ID Application: Running with Crayons Ltd (XZZXE9SED4) → /Applications/Alfred 5.app/Contents/MacOS/Alfred
+✅ Gatekeeper Approved: Developer ID Application: Serhiy Mytrovtsiy (RP2S87B72W) → /Applications/Stats.app/Contents/MacOS/Stats
+✅ Gatekeeper Approved: Developer ID Application: Beyond Code GmbH (8Z259RPWAC) → /Applications/Herd.app/Contents/MacOS/Herd
+
+✅ Scan complete. All startup items have been reviewed.
+```
 
 Each line in the script's output describes the status of a startup item. Here is what the symbols mean:
 
